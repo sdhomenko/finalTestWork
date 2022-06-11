@@ -21,9 +21,7 @@ string[] OptimizeMassive(string[] text)
     int count = 0;
     for (int i = 0; i < text.Length; i++)
     {
-        string element = String.Empty;
-        element = text[i];
-        if (element.Length <= 3) newtext[i - count] = text[i];
+        if (text[i].Length <= 3) newtext[i - count] = text[i];
         else count++;
     }
     Array.Resize(ref newtext, text.Length - count);
